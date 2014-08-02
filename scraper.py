@@ -39,7 +39,7 @@ url = "http://www.who.int/csr/don/archive/disease/ebola/en/"
 root = lxml.html.parse(url).getroot()
 print root
 
-div = root.xpath( '//div[@id="main"]' )
+div = root.xpath( '//div[@id="content"]' )
 print div
 
 rownum = 0
