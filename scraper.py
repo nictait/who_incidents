@@ -42,6 +42,7 @@ print root
 div = root.xpath( '//div[@class="col_2-1_1"]' )
 print div
 
+urllist = []
 rownum = 0
 for row in div:
     rownum = rownum + 1
@@ -56,7 +57,10 @@ for row in div:
         #print str(rownum)
         if all( x in cell for x in ["2014","_ebola/"] ):
         #if "_ebola/" in cell:
-            print cell
+            #print cell
+            urlstr = "http://www.who.int" + cell + '"'
+            print urlstr
+            urllist.append(urlstr)
       
         #print colnum
         #print cell.text_content()
