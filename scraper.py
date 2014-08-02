@@ -83,17 +83,16 @@ for url in urllist:
         cellnum = 0
         datacell = 0
         for cell in row.xpath('//td'):
-            if rownum == 1:
+            #if rownum == 1:
             #print cell.text_content()
-        
             cellnum = cellnum + 1
             colnum = colnum + 1
             print str(cellnum % 6)
             #print str(cellnum) + " " + cell.text_content()
         
-        #scraperwiki.sqlite.save(unique_keys=['recno'],data={"recno":cellnum,"country":"","new":""})
-        if cellnum > 6:
-            datacell = datacell + 1
+            #scraperwiki.sqlite.save(unique_keys=['recno'],data={"recno":cellnum,"country":"","new":""})
+            if cellnum > 6:
+                datacell = datacell + 1
             if (datacell % 18) == 1:
                 country = cell.text_content()
             if (datacell % 18) == 8:
