@@ -53,8 +53,8 @@ for row in div:
     for cell in row.xpath('//li'):
         #if rownum == 1:
         #print cell.text_content()
-        print str(rownum)
-        
+        #print str(rownum)
+        print li
       
         #print colnum
         #print cell.text_content()
