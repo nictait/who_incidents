@@ -1,6 +1,9 @@
 # This is a template for a Python scraper on Morph (https://morph.io)
 # including some code snippets below that you should find helpful
 
+
+
+
 # import scraperwiki
 # import lxml.html
 #
@@ -39,13 +42,14 @@ print root
 div = root.xpath( '//div[@id="main"]' )
 print div
 
+rownum = 0
 for row in div:
-#    rownum = rownum + 1
+    rownum = rownum + 1
     
 #    #print row
 #    cellnum = 0
 #    datacell = 0
-    print row.text_content()
+    #print row.text_content()
     for cell in row.xpath('//td'):
         #if rownum == 1:
         print cell.text_content()
@@ -53,6 +57,10 @@ for row in div:
       
         #print colnum
         #print cell.text_content()
+
+
+print "rows = " + str(rownum)
+
 
 #url = "http://www.who.int/csr/don/2014_07_31_ebola/en/"
 
