@@ -45,6 +45,7 @@ for row in div:
 #    #print row
 #    cellnum = 0
 #    datacell = 0
+    print row.text_content()
     for cell in row.xpath('//td'):
         #if rownum == 1:
         print cell.text_content()
