@@ -43,7 +43,7 @@ div = root.xpath( '//div[@id="main"]' )
 print div
 
 rownum = 0
-for row in div:
+for col in div:
     rownum = rownum + 1
     
 #    #print row
