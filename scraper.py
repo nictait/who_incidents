@@ -58,15 +58,19 @@ for row in div:
         if all( x in cell for x in ["2014","_ebola/"] ):
         #if "_ebola/" in cell:
             #print cell
-            urlstr = "http://www.who.int" + cell + '"'
-            print urlstr
+            urlstr = "http://www.who.int" + cell
+            #print urlstr
             urllist.append(urlstr)
       
         #print colnum
         #print cell.text_content()
 
 
-print "rows = " + str(rownum)
+
+for url in urllist:
+    print url
+
+#print "rows = " + str(rownum)
 
 
 #url = "http://www.who.int/csr/don/2014_07_31_ebola/en/"
