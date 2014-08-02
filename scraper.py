@@ -54,7 +54,7 @@ for row in div:
         #if rownum == 1:
         #print cell.text_content()
         #print str(rownum)
-        if all( x in cell for x in ["2014","ebola"] ):
+        if all( x in cell for x in ["2014","_ebola/"] ):
         #if "_ebola/" in cell:
             print cell
       
