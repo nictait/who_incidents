@@ -54,7 +54,7 @@ for row in div:
         #if rownum == 1:
         #print cell.text_content()
         #print str(rownum)
-        print cell
+        print cell.text
       
         #print colnum
         #print cell.text_content()
