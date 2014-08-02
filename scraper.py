@@ -54,7 +54,7 @@ for row in div:
         #if rownum == 1:
         #print cell.text_content()
         #print str(rownum)
-        if "_ebola" in cell:
+        if "_ebola/" in cell:
             print cell
       
         #print colnum
