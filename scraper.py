@@ -50,11 +50,11 @@ for row in div:
 #    cellnum = 0
 #    datacell = 0
     #print row.text_content()
-    for cell in row.xpath('//li'):
+    for cell in row.xpath('//li/a/@href'):
         #if rownum == 1:
         #print cell.text_content()
         #print str(rownum)
-        print cell.text
+        print cell
       
         #print colnum
         #print cell.text_content()
