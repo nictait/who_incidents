@@ -93,20 +93,20 @@ for url in urllist:
             #scraperwiki.sqlite.save(unique_keys=['recno'],data={"recno":cellnum,"country":"","new":""})
             if cellnum > 6:
                 datacell = datacell + 1
-            if (datacell % 18) == 1:
-                country = cell.text_content()
-            if (datacell % 18) == 8:
-                new = cell.text_content()
-            if (datacell % 18) == 9:
-                confirmed = cell.text_content()
-            if (datacell % 18) == 10:
-                probable = cell.text_content()
-            if (datacell % 18) == 11:
-                suspect = cell.text_content()
-            if (datacell % 18) == 12:
-                total = cell.text_content()    
-            if (datacell % 18) == 0:
-                scraperwiki.sqlite.save(unique_keys=['recno'],data={"recno":cellnum,"country":country,"new":new,"confirmed":confirmed,"probable":probable,"suspect":suspect,"total":total})
+                if (datacell % 18) == 1:
+                    country = cell.text_content()
+                if (datacell % 18) == 8:
+                    new = cell.text_content()
+                if (datacell % 18) == 9:
+                    confirmed = cell.text_content()
+                if (datacell % 18) == 10:
+                    probable = cell.text_content()
+                if (datacell % 18) == 11:
+                    suspect = cell.text_content()
+                if (datacell % 18) == 12:
+                    total = cell.text_content()    
+                if (datacell % 18) == 0:
+                    scraperwiki.sqlite.save(unique_keys=['recno'],data={"recno":cellnum,"country":country,"new":new,"confirmed":confirmed,"probable":probable,"suspect":suspect,"total":total})
                 
 
 #print "rows = " + str(rownum)
