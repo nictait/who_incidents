@@ -50,7 +50,7 @@ for row in div:
 #    cellnum = 0
 #    datacell = 0
     #print row.text_content()
-    for cell in row.xpath('//ul'):
+    for cell in row.xpath('//li'):
         #if rownum == 1:
         #print cell.text_content()
         print str(rownum)
