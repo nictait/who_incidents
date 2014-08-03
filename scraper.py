@@ -108,17 +108,16 @@ for url in urllist:
                     suspect_cases = cell.text_content()
                 if (datacell % 18) == 12:
                     total_cases = cell.text_content()   
-                if (datacell % 18) == 13:
-                    new_deaths = cell.text_content()
                 if (datacell % 18) == 14:
-                    confirmed_deaths = cell.text_content()
+                    new_deaths = cell.text_content()
                 if (datacell % 18) == 15:
-                    probable_deaths = cell.text_content()
+                    confirmed_deaths = cell.text_content()
                 if (datacell % 18) == 16:
-                    suspect_deaths = cell.text_content()
+                    probable_deaths = cell.text_content()
                 if (datacell % 18) == 17:
-                    total_deaths = cell.text_content()
+                    suspect_deaths = cell.text_content()
                 if (datacell % 18) == 0:
+                    total_deaths = cell.text_content()
                     recno = recno + 1
                     #print country
                     scraperwiki.sqlite.save(unique_keys=['recno'],data={"recno":recno,"country":country,
