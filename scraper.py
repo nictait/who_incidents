@@ -66,13 +66,13 @@ for row in div:
         #print cell.text_content()
 
 
-
+recno = 0
 for url in urllist:
     print url
     root = lxml.html.parse(url).getroot()
     docstr = lxml.html.tostring(root)
 
-    recno = 0
+    
     div = root.xpath( '//div[@id="main"]' )
 
     colnum = 0
