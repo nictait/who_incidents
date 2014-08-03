@@ -87,7 +87,7 @@ for url in urllist:
             #print cell.text_content()
             cellnum = cellnum + 1
             colnum = colnum + 1
-            print str(cellnum % 6)
+            #print str(cellnum % 6)
             #print str(cellnum) + " " + cell.text_content()
         
             #scraperwiki.sqlite.save(unique_keys=['recno'],data={"recno":cellnum,"country":"","new":""})
