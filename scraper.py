@@ -99,19 +99,33 @@ for url in urllist:
                 if (datacell % 18) == 1:
                     country = cell.text_content()
                 if (datacell % 18) == 8:
-                    new = cell.text_content()
+                    new_cases = cell.text_content()
                 if (datacell % 18) == 9:
-                    confirmed = cell.text_content()
+                    confirmed_cases = cell.text_content()
                 if (datacell % 18) == 10:
-                    probable = cell.text_content()
+                    probable_cases = cell.text_content()
                 if (datacell % 18) == 11:
-                    suspect = cell.text_content()
+                    suspect_cases = cell.text_content()
                 if (datacell % 18) == 12:
-                    total = cell.text_content()    
+                    total_cases = cell.text_content()   
+                if (datacell % 18) == 13:
+                    new_deaths = cell.text_content()
+                if (datacell % 18) == 14:
+                    confirmed_deaths = cell.text_content()
+                if (datacell % 18) == 15:
+                    probable_deaths = cell.text_content()
+                if (datacell % 18) == 16:
+                    suspect_deaths = cell.text_content()
+                if (datacell % 18) == 17:
+                    total_deaths = cell.text_content()
                 if (datacell % 18) == 0:
                     recno = recno + 1
                     #print country
-                    scraperwiki.sqlite.save(unique_keys=['recno'],data={"recno":recno,"country":country,"date":date_,"new":new,"confirmed":confirmed,"probable":probable,"suspect":suspect,"total":total})
+                    scraperwiki.sqlite.save(unique_keys=['recno'],data={"recno":recno,"country":country,
+                    "date":date_,"new_cases":new_cases,"confirmed_cases":confirmed_cases,
+                    "probable_cases":probable_cases,"suspect_cases":suspect_cases,"total_cases":total_cases,
+                    "new_deaths":new_deaths,"confirmed_deaths":confirmed_deaths,
+                    "probable_deaths":probable_deaths,"suspect_deaths":suspect_deaths,"total_daths":total_deaths})
                 
 
 #print "rows = " + str(rownum)
