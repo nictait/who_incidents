@@ -125,7 +125,7 @@ for url in urllist:
                     "date":date_,"new_cases":new_cases,"confirmed_cases":confirmed_cases,
                     "probable_cases":probable_cases,"suspect_cases":suspect_cases,"total_cases":total_cases,
                     "new_deaths":new_deaths,"confirmed_deaths":confirmed_deaths,
-                    "probable_deaths":probable_deaths,"suspect_deaths":suspect_deaths,"total_daths":total_deaths})
+                    "probable_deaths":probable_deaths,"suspect_deaths":suspect_deaths,"total_deaths":total_deaths})
                 
 
 #print "rows = " + str(rownum)
