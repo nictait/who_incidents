@@ -69,7 +69,7 @@ for row in div:
 recno = 0
 for url in urllist:
     print url
-    date_ = (url[42:44] + url[39:41] + url[34:38])
+    date_ = (url[42:44] + "/" + url[39:41] + "/" + url[34:38])
     #date_ = url[42:44]
     print date_
     root = lxml.html.parse(url).getroot()
@@ -111,7 +111,7 @@ for url in urllist:
                 if (datacell % 18) == 0:
                     recno = recno + 1
                     #print country
-                    scraperwiki.sqlite.save(unique_keys=['recno'],data={"recno":recno,"country":country,"new":new,"confirmed":confirmed,"probable":probable,"suspect":suspect,"total":total})
+                    scraperwiki.sqlite.save(unique_keys=['recno'],data={"recno":recno,"country":country,"date":date_,"new":new,"confirmed":confirmed,"probable":probable,"suspect":suspect,"total":total})
                 
 
 #print "rows = " + str(rownum)
