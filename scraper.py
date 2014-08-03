@@ -106,8 +106,9 @@ for url in urllist:
                 if (datacell % 18) == 12:
                     total = cell.text_content()    
                 if (datacell % 18) == 0:
-                    print country
-                    #scraperwiki.sqlite.save(unique_keys=['recno'],data={"recno":cellnum,"country":country,"new":new,"confirmed":confirmed,"probable":probable,"suspect":suspect,"total":total})
+                    recno = recno + 1
+                    #print country
+                    scraperwiki.sqlite.save(unique_keys=['recno'],data={"recno":recno,"country":country,"new":new,"confirmed":confirmed,"probable":probable,"suspect":suspect,"total":total})
                 
 
 #print "rows = " + str(rownum)
