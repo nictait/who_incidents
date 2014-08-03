@@ -69,6 +69,8 @@ for row in div:
 recno = 0
 for url in urllist:
     print url
+    date = url[43:44] + url[40:41] + url[35:38]
+    print date
     root = lxml.html.parse(url).getroot()
     docstr = lxml.html.tostring(root)
 
