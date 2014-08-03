@@ -30,7 +30,7 @@ import scraperwiki
 import requests
 import lxml.html
 
-scraperwiki.sqlite.execute("drop table if exists swdata")
+scraperwiki.sqlite.execute("drop table if exists data")
 
 #html = requests.get("http://www.who.int/csr/don/archive/disease/ebola/en/")
 #print html.content
